@@ -1,10 +1,10 @@
-#include "StorkApp.h"
+#include "DjsalodepositApp.h"
 #include "Moose.h"
 #include "AppFactory.h"
 #include "ModulesApp.h"
 
 template<>
-InputParameters validParams<StorkApp>()
+InputParameters validParams<DjsalodepositApp>()
 {
   InputParameters params = validParams<MooseApp>();
 
@@ -13,36 +13,36 @@ InputParameters validParams<StorkApp>()
   return params;
 }
 
-StorkApp::StorkApp(const std::string & name, InputParameters parameters) :
+DjsalodepositApp::DjsalodepositApp(const std::string & name, InputParameters parameters) :
     MooseApp(name, parameters)
 {
   srand(processor_id());
 
   Moose::registerObjects(_factory);
   ModulesApp::registerObjects(_factory);
-  StorkApp::registerObjects(_factory);
+  DjsalodepositApp::registerObjects(_factory);
 
   Moose::associateSyntax(_syntax, _action_factory);
   ModulesApp::associateSyntax(_syntax, _action_factory);
-  StorkApp::associateSyntax(_syntax, _action_factory);
+  DjsalodepositApp::associateSyntax(_syntax, _action_factory);
 }
 
-StorkApp::~StorkApp()
+DjsalodepositApp::~DjsalodepositApp()
 {
 }
 
 void
-StorkApp::registerApps()
+DjsalodepositApp::registerApps()
 {
-  registerApp(StorkApp);
+  registerApp(DjsalodepositApp);
 }
 
 void
-StorkApp::registerObjects(Factory & factory)
+DjsalodepositApp::registerObjects(Factory & factory)
 {
 }
 
 void
-StorkApp::associateSyntax(Syntax & syntax, ActionFactory & action_factory)
+DjsalodepositApp::associateSyntax(Syntax & syntax, ActionFactory & action_factory)
 {
 }
