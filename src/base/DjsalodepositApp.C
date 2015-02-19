@@ -31,6 +31,7 @@ DjsalodepositApp::~DjsalodepositApp()
 {
 }
 
+extern "C" void DjsalodepositApp__registerApps() { DjsalodepositApp::registerApps(); }
 void
 DjsalodepositApp::registerApps()
 {
