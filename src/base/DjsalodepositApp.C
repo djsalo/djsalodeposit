@@ -13,10 +13,9 @@ InputParameters validParams<DjsalodepositApp>()
   return params;
 }
 
-DjsalodepositApp::DjsalodepositApp(const std::string & name, InputParameters parameters) :
-    MooseApp(name, parameters)
+DjsalodepositApp::DjsalodepositApp(InputParameters parameters) :
+    MooseApp(parameters)
 {
-  srand(processor_id());
 
   Moose::registerObjects(_factory);
   ModulesApp::registerObjects(_factory);

@@ -11,7 +11,7 @@ InputParameters validParams<DjsalodepositApp>();
 class DjsalodepositApp : public MooseApp
 {
 public:
-  DjsalodepositApp(const std::string & name, InputParameters parameters);
+  DjsalodepositApp(InputParameters parameters);
   virtual ~DjsalodepositApp();
 
   static void registerApps();
